@@ -14,7 +14,7 @@ export class AppComponent {
     if (this.count==10) {
       this.count = this.count + 10;  
     }
-    this.count = this.count = 1;
+    this.count = this.count + 1;
   }
 
   handleDecrease = () => {
