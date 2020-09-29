@@ -1,0 +1,12 @@
+Section 01: 
+
+Activity 04: File Structure - 
+1. bottom-4 files : Type script configs. In angular we write in TypeScript.
+2. Readme - Basic help provided. 
+3. package.json - Includes most crucial information like (name of project, versioning, type of scripts that you, dependencies)
+4. angular.json - Angular configuration files
+5. .editorconfig - How my editor works.
+6. e2e/(folder) - For testers.
+7. src/(folder) - All the dev stuff goes in here. 
+    
+Section 02:
