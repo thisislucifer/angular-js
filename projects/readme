@@ -9,4 +9,13 @@ Activity 04: File Structure -
 6. e2e/(folder) - For testers.
 7. src/(folder) - All the dev stuff goes in here. 
     
-Section 02:
+Section 04:
+1. <base href="/" /> - Allows the angular app to consider what is the base reference URL. (E.g When we sometimes click on Logo of website it takes to base page of website)
+2. platformBrowserDynamic().bootstrapModule() - This module is a method which expects to provide the very first file to load-up when the application starts .
+                                                Load-up program into memeory.
+3. hierarchy - 
+Team -> Module -> component
+    Eg for module - Authentication Module, Comment module, HomePage, etc 
+    Eg. of Component - An authentication module wll have - Sign-up, Sign-in
+Note - Every App has multiple Module and Every Module has multiple components. And Each module is handled by a team in App.
+4. Create a component - 
