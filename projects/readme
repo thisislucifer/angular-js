@@ -9,7 +9,7 @@ Activity 04: File Structure -
 6. e2e/(folder) - For testers.
 7. src/(folder) - All the dev stuff goes in here. 
     
-Section 04:
+Section 04: (Core-Angular things)
 1. <base href="/" /> - Allows the angular app to consider what is the base reference URL. (E.g When we sometimes click on Logo of website it takes to base page of website)
 2. platformBrowserDynamic().bootstrapModule() - This module is a method which expects to provide the very first file to load-up when the application starts .
                                                 Load-up program into memeory.
@@ -19,3 +19,11 @@ Team -> Module -> component
     Eg. of Component - An authentication module wll have - Sign-up, Sign-in
 Note - Every App has multiple Module and Every Module has multiple components. And Each module is handled by a team in App.
 4. Create a component - 
+
+Section 05: (Routing)
+1. When routing is enabled, on new file in src/app named "app-routing.module.ts" is generated. This is the file where entirety of
+    the routing is dependent.
+2. In Routes[] - It takes array of objects of path. Each {}obj takes arg like - where to go(route) and which component to load-up 
+    after hitting the route.
+3. 
+
