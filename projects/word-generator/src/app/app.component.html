@@ -16,10 +16,21 @@
   <div class="text-center"> 
     <button (click)="generate()" class="btn btn-info">Generate Words</button>
   </div>
-  <!-- Display Card -->
+  <!-- button  -->
+  <div class="text-center"> 
+    <button (click)="generate_random_countries()" class="btn btn-info">Generate Random Countries</button>
+  </div>
+  <!-- Display Card for Words -->
   <div *ngIf="words"  class="card card-body">
-    <p class="display-4">
+    <p class="display-3">
       {{words}}
+    </p>
+  </div>
+  <br>
+  <!-- Display Card for Countries -->
+  <div *ngIf="countries"  class="card card-body">
+    <p class="display-4">
+      {{countries}}
     </p>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import arrayWords from '../utils/words'
+import arrayWords from '../utils/words';
+import arrayCountries from '../utils/countries';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,9 @@ import arrayWords from '../utils/words'
 })
 export class AppComponent {
   title = 'word-generator';
-
+  countries = ''
   words = ''
-  limit = 10;
+  limit = 1;
   
   handleSliderChange(newLimit : number){
     this.limit = newLimit; //We have updated the value of limit from 10 to new-value;
@@ -18,5 +19,11 @@ export class AppComponent {
 
   generate(){
     this.words = arrayWords.slice(0, this.limit).join(' ');
+    this.countries = '';
+  }
+
+  generate_random_countries(){
+    this.countries = arrayCountries.slice(0, Math.floor((Math.random() * 20) + 1)).join(' ');
+    this.words='';
   }
 }
