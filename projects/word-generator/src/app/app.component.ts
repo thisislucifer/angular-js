@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   generate_random_countries(){
-    this.countries = arrayCountries.slice(0, Math.floor((Math.random() * 20) + 1)).join(' ');
+    this.countries = arrayCountries.slice(0, Math.floor((Math.random() * this.limit) + 1)).join(' ');
     this.words='';
   }
 }
