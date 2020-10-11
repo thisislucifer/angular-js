@@ -25,5 +25,7 @@ Section 05: (Routing)
     the routing is dependent.
 2. In Routes[] - It takes array of objects of path. Each {}obj takes arg like - where to go(route) and which component to load-up 
     after hitting the route.
-3. 
+
+Section 06: [ (3rd party module), (passing data from parent component to Child) ]
+
 
