@@ -27,5 +27,14 @@ Section 05: (Routing)
     after hitting the route.
 
 Section 06: [ (3rd party module), (passing data from parent component to Child) ]
+1. Create component using ng cli - >
+    syntax : ng generate component components/component-name < this is path of single-component>
+2. Whenever a new thing comes , the app.module is the first to know, hence when we create a new component using ng cli, 
+    a component is create alongside updating the app.module.ts file.
+3. To delete a component - > 
+    a. Delete the folder of component-name.
+    b. Go to app.module.ts : delete the import line of component-name.
+    c. in app.module.ts : delete the component-name from declaration part.
+
 
 
