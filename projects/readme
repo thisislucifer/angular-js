@@ -35,6 +35,8 @@ Section 06: [ (3rd party module), (passing data from parent component to Child) 
     a. Delete the folder of component-name.
     b. Go to app.module.ts : delete the import line of component-name.
     c. in app.module.ts : delete the component-name from declaration part.
-
+4. In Html file, Angular does not treats anything inside " " as string but as variable name declared in .ts file
+    If you still want to pass it as string, wrap it up inside ' ' . 
+    eg. <div *ngSwitchCase=" 'empty' ">
 
 
