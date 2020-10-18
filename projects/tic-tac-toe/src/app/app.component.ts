@@ -9,15 +9,25 @@ import {ToastrService} from 'ngx-toastr';
 export class AppComponent {
   title = 'tic-tac-toe';
 
-  winMessage: String = '';
+  winMessage: string = '';
   isCross : Boolean = false;
-  itemArray: String[] = new Array(9).fill('empty')
+  itemArray: string[] = new Array(9).fill('empty')
 
   constructor(private toastr: ToastrService) {} //constructor injection-->
 
-  handleClick = () => {
-    
-  };
+  handleClick(itemNumber: number){
+    if (this.winMessage) {
+      return this.toastr.success(this.winMessage);
+    }
+    if (this.itemArray[itemNumber] === 'empty') {
+      this.itemArray[itemNumber] = this.isCross ? 'cross' : 'circle'
+      this.isCross = !this.isCross
+    }else{
+      return this.toastr.info("Already filled!")
+    }
+
+    this.checkIsWinner();
+  }
 
   checkIsWinner = () => {
     //  checking  winner of the game

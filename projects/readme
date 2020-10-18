@@ -38,5 +38,6 @@ Section 06: [ (3rd party module), (passing data from parent component to Child) 
 4. In Html file, Angular does not treats anything inside " " as string but as variable name declared in .ts file
     If you still want to pass it as string, wrap it up inside ' ' . 
     eg. <div *ngSwitchCase=" 'empty' ">
-
+5. ()=""  --> Event binding
+   []=""  --> Property binding
 
