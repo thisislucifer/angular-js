@@ -1,15 +1,20 @@
 <div [ngSwitch]="iconName">
     <div *ngSwitchCase=" 'empty' ">
-        <fa-icon [icon]="faPen" class='icon'></fa-icon>
+        <!-- pass props(properties) -->
+        <fa-icon [icon]="faPen" class="icon"></fa-icon> 
     </div>
+
     <div *ngSwitchCase=" 'cross' ">
-        <fa-icon [icon]="faTimes" class='icon text-info'></fa-icon>
+        <!-- pass props(properties) -->
+        <fa-icon [icon]="faTimes" class="icon text-info"></fa-icon> 
     </div>
+
     <div *ngSwitchCase=" 'circle' ">
-        <fa-icon [icon]="faCircle" class='icon text-danger'></fa-icon>
+        <!-- pass props(properties) -->
+        <fa-icon [icon]="faCircle" class="icon text-success"></fa-icon> 
     </div>
+
     <div *ngSwitchDefault>
         Something is not Right!
     </div>
-
 </div>

@@ -1,32 +1,52 @@
 import { Component } from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'tic-tac-toe';
-
   winMessage: string = '';
-  isCross : Boolean = false;
-  itemArray: string[] = new Array(9).fill('empty')
+  tieMessage: string = '';
+  isCross = false;
+  // filling the array with a string 'empty -->
+  itemArray : string[] = new Array(9).fill('empty')
+  counter: number = 0
 
-  constructor(private toastr: ToastrService) {} //constructor injection-->
+
+  // constructor injection -->
+  constructor(private toastr:ToastrService){}
 
   handleClick(itemNumber: number){
-    if (this.winMessage) {
-      return this.toastr.success(this.winMessage);
+    if(this.winMessage){
+      return this.toastr.success(this.winMessage)
     }
-    if (this.itemArray[itemNumber] === 'empty') {
-      this.itemArray[itemNumber] = this.isCross ? 'cross' : 'circle'
-      this.isCross = !this.isCross
+    
+    if (this.itemArray[itemNumber] === 'empty'){
+      this.itemArray[itemNumber] = this.isCross ? 'cross':'circle';
+      this.isCross = !this.isCross; //change the value to give 2nd player turn!
     }else{
-      return this.toastr.info("Already filled!")
+      return this.toastr.info('Already Filled!')
+    }
+    
+    // check if its a tie!
+    if (this.itemArray.length === this.itemArray.filter(function(x){ return x !== "empty"; }).length
+    ){
+      this.tieMessage = 'Its a TIE!!'
     }
 
-    this.checkIsWinner();
+    this.checkIsWinner()
+  }
+
+  //arrow function -->
+  reloadGame = () =>{
+    this.winMessage = '';
+    this.isCross = false;
+    this.itemArray = new Array(9).fill('empty')
   }
 
   checkIsWinner = () => {
@@ -80,11 +100,5 @@ export class AppComponent {
     ) {
       this.winMessage = `${this.itemArray[2]} won`;
     }
-  };
-
-  reloadGame = () => {
-    this.winMessage = '';
-    this.isCross = false;
-    this.itemArray = new Array(9).fill('empty');
   };
 }
