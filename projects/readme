@@ -1,43 +1,43 @@
 Section 01: 
 
-Activity 04: File Structure - 
-1. bottom-4 files : Type script configs. In angular we write in TypeScript.
-2. Readme - Basic help provided. 
-3. package.json - Includes most crucial information like (name of project, versioning, type of scripts that you, dependencies)
-4. angular.json - Angular configuration files
-5. .editorconfig - How my editor works.
-6. e2e/(folder) - For testers.
-7. src/(folder) - All the dev stuff goes in here. 
+    Activity 04: File Structure - 
+    1. bottom-4 files : Type script configs. In angular we write in TypeScript.
+    2. Readme - Basic help provided. 
+    3. package.json - Includes most crucial information like (name of project, versioning, type of scripts that you, dependencies)
+    4. angular.json - Angular configuration files
+    5. .editorconfig - How my editor works.
+    6. e2e/(folder) - For testers.
+    7. src/(folder) - All the dev stuff goes in here. 
     
 Section 04: (Core-Angular things)
-1. <base href="/" /> - Allows the angular app to consider what is the base reference URL. (E.g When we sometimes click on Logo of website it takes to base page of website)
-2. platformBrowserDynamic().bootstrapModule() - This module is a method which expects to provide the very first file to load-up when the application starts .
+    1. <base href="/" /> - Allows the angular app to consider what is the base reference URL. (E.g When we sometimes click on Logo of website it takes to base page of website)
+    2. platformBrowserDynamic().bootstrapModule() - This module is a method which expects to provide the very first file to load-up when the application starts .
                                                 Load-up program into memeory.
-3. hierarchy - 
-Team -> Module -> component
-    Eg for module - Authentication Module, Comment module, HomePage, etc 
-    Eg. of Component - An authentication module wll have - Sign-up, Sign-in
-Note - Every App has multiple Module and Every Module has multiple components. And Each module is handled by a team in App.
-4. Create a component - 
+    3. hierarchy - 
+    Team -> Module -> component
+        Eg for module - Authentication Module, Comment module, HomePage, etc 
+        Eg. of Component - An authentication module wll have - Sign-up, Sign-in
+    Note - Every App has multiple Module and Every Module has multiple components. And Each module is handled by a team in App.
+    4. Create a component - 
 
 Section 05: (Routing)
-1. When routing is enabled, on new file in src/app named "app-routing.module.ts" is generated. This is the file where entirety of
-    the routing is dependent.
-2. In Routes[] - It takes array of objects of path. Each {}obj takes arg like - where to go(route) and which component to load-up 
-    after hitting the route.
+    1. When routing is enabled, on new file in src/app named "app-routing.module.ts" is generated. This is the file where entirety of
+        the routing is dependent.
+    2. In Routes[] - It takes array of objects of path. Each {}obj takes arg like - where to go(route) and which component to load-up 
+        after hitting the route.
 
 Section 06: [ (3rd party module), (passing data from parent component to Child) ]
-1. Create component using ng cli - >
-    syntax : ng generate component components/component-name < this is path of single-component>
-2. Whenever a new thing comes , the app.module is the first to know, hence when we create a new component using ng cli, 
-    a component is create alongside updating the app.module.ts file.
-3. To delete a component - > 
-    a. Delete the folder of component-name.
-    b. Go to app.module.ts : delete the import line of component-name.
-    c. in app.module.ts : delete the component-name from declaration part.
-4. In Html file, Angular does not treats anything inside " " as string but as variable name declared in .ts file
-    If you still want to pass it as string, wrap it up inside ' ' . 
-    eg. <div *ngSwitchCase=" 'empty' ">
-5. ()=""  --> Event binding
-   []=""  --> Property binding
+    1. Create component using ng cli - >
+        syntax : ng generate component components/component-name < this is path of single-component>
+    2. Whenever a new thing comes , the app.module is the first to know, hence when we create a new component using ng cli, 
+        a component is create alongside updating the app.module.ts file.
+    3. To delete a component - > 
+        a. Delete the folder of component-name.
+        b. Go to app.module.ts : delete the import line of component-name.
+        c. in app.module.ts : delete the component-name from declaration part.
+    4. In Html file, Angular does not treats anything inside " " as string but as variable name declared in .ts file
+        If you still want to pass it as string, wrap it up inside ' ' . 
+        eg. <div *ngSwitchCase=" 'empty' ">
+    5. ()=""  --> Event binding
+    []=""  --> Property binding
 
