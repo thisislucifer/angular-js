@@ -41,3 +41,15 @@ Section 06: [ (3rd party module), (passing data from parent component to Child) 
     5. ()=""  --> Event binding
     []=""  --> Property binding
 
+Section 07: [RxJS]
+    1. Problem RxJS is trying to solve - How to handle async calls with multiple events. 
+    2. Observable - Anything that you want to observe for a limited period of time.
+    3. In order to Observe an event, we can achieve this by other way "fromEvent" which also observes to an event that we mention.
+    4. from() - Can convert anthing into an Observable.
+
+Section 08: [Forms, To-Do app]
+    1. Services are responsible for manipulating the data.
+    2. Create service command - 
+    ng generate service <path/to/service/with/name>
+    3. Model - Model is nothing but a good paractice to have which tells how my application
+        is going to have (like a basic template).
