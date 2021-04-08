@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/service/todo.service';
+
+import { Todo } from './../../model/Todo'
+import {faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-todos',
@@ -6,10 +10,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-
-  constructor() { }
-
+  faTrashAlt = faTrashAlt;
+  todos: Todo[];
+  
+  // As this todo needs to be accessed by only TodoComponent, hence we have maked it as
+  // "private".
+  constructor(private todoService: TodoService) {}
+  
   ngOnInit(): void {
+    //Observe the Observable and fill the array(i.e todos) with that.
+    this.todoService.getTodos().subscribe(todos => {
+      this.todos = todos
+    });
   }
 
+  changeTodoStatus(todo: Todo){
+    this.todoService.changeStatus(todo)
+  }
+
+  deleteTodo(todo: Todo){
+    this.todoService.deleteTodo(todo);
+  }
+
+  
 }

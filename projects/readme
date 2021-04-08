@@ -53,3 +53,8 @@ Section 08: [Forms, To-Do app]
     ng generate service <path/to/service/with/name>
     3. Model - Model is nothing but a good paractice to have which tells how my application
         is going to have (like a basic template).
+    4. Any modification in data can be done through services. Services can be considered as
+        part where you can keep all the business logic so that your component dont care
+        what happens with data and all the other things are not affected by it.
+        @injectable decorator - Is use to inject this data at root level.   
+    5. As soon as any component fired, the ngOnInit method is fired up automatically.
