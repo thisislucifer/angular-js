@@ -18,6 +18,7 @@ export class TodosComponent implements OnInit {
   constructor(private todoService: TodoService) {}
   
   ngOnInit(): void {
+    // In this function, we are hooking the service which we created..
     //Observe the Observable and fill the array(i.e todos) with that.
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos
