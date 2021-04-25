@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from 'src/app/service/todo.service';
 
+// Import Toastr --
+import { ToastrService } from 'ngx-toastr';
+
 import { Todo } from './../../model/Todo'
 import {faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
@@ -15,7 +18,7 @@ export class TodosComponent implements OnInit {
   
   // As this todo needs to be accessed by only TodoComponent, hence we have maked it as
   // "private".
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService, private toastr: ToastrService) { }
   
   ngOnInit(): void {
     // In this function, we are hooking the service which we created..
@@ -31,6 +34,7 @@ export class TodosComponent implements OnInit {
 
   deleteTodo(todo: Todo){
     this.todoService.deleteTodo(todo);
+    return this.toastr.warning('Note Deleted!')
   }
 
   

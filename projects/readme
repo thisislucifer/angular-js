@@ -26,7 +26,7 @@ Section 05: (Routing)
     2. In Routes[] - It takes array of objects of path. Each {}obj takes arg like - where to go(route) and which component to load-up 
         after hitting the route.
 
-Section 06: [ (3rd party module), (passing data from parent component to Child) ]
+Section 06: [ (3rd party module), (passing data from parent component to Child), Tic-Tac-Toe App]
     1. Create component using ng cli - >
         syntax : ng generate component components/component-name < this is path of single-component>
     2. Whenever a new thing comes , the app.module is the first to know, hence when we create a new component using ng cli, 
@@ -39,7 +39,7 @@ Section 06: [ (3rd party module), (passing data from parent component to Child) 
         If you still want to pass it as string, wrap it up inside ' ' . 
         eg. <div *ngSwitchCase=" 'empty' ">
     5. ()=""  --> Event binding
-    []=""  --> Property binding
+       []=""  --> Property binding
 
 Section 07: [RxJS]
     1. Problem RxJS is trying to solve - How to handle async calls with multiple events. 
