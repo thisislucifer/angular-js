@@ -31,7 +31,8 @@ export class TodoService {
   }
 
   // CRUD OPS ->
-  getTodos(){
+  // This getTodos will return the data as a obervable. 
+  getTodos(){  
     return of(this.todos)
   }
 
