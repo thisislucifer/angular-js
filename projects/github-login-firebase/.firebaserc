@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lco-project-01": {
+      "hosting": {
+        "github-login-firebase": [
+          "lco-project-01"
+        ]
+      }
+    }
+  }
+}

@@ -40,6 +40,7 @@ Section 06: [ (3rd party module), (passing data from parent component to Child),
         eg. <div *ngSwitchCase=" 'empty' ">
     5. ()=""  --> Event binding
        []=""  --> Property binding
+       ([]) = "" --> Two-way binding
 
 Section 07: [RxJS]
     1. Problem RxJS is trying to solve - How to handle async calls with multiple events. 
@@ -61,10 +62,24 @@ Section 08: [Forms, To-Do app]
     6. Forms Types- 
         a. Reactive
         b. template driven
+        c. NgForms
         ref - https://medium.com/swlh/have-you-ever-been-confused-between-using-a-template-driven-or-reactive-form-angular-87673cf5b417
 
 Section 10: [APIs, Random-card App]
     1. Whenever we request an API using HTTP-client, behind the scenes HTTP client makes the servier request(API request) a simple obesrvable. That means whatever we will get back from the API request call will be an observable. And yes, we can put a subscriber on that.
     2. By default, the HTTP client unsubscribes the API req call, hence we do not get fresh data after every fix interval of time. But this can be overided.
     3. Ref 06 video to understand how prop is passed from Parent to child will all the changes that are necessary.
-    4.
+
+Section 11: [APIs, Firebase]
+    1. Integrate firebase into web-app. Ref link- https://firebase.google.com/docs/web/setup
+    2. Router : 
+        1. Just like href, [routerLink] is a propery in angular. These routerLink are configured from router file.
+        2. format of [routerLink] = "['/routeToVisit']"
+    3. In-order to detect the change in Grand-child and Grand-parent, angular has provided api. 
+        1. changeDetectRef - https://angular.io/api/core/ChangeDetectorRef
+    4. OnChanges - A lifecycle hook that is called when any data-bound property of a directive changes. Define an ngOnChanges() method to handle the changes.
+    5. NgForms : It is another(Angular) way of having forms. In order to use the NgForms, import it in .ts file of component. 
+        NgForms when used, returns a object. This returned object is catched in onSubmit() method. 
+       In .html file : <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    6. Note- Order of the routes provided in app-routing.module.ts is 101% important.
+    7. 
