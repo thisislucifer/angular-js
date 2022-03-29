@@ -83,3 +83,45 @@ Section 11: [APIs, Firebase]
        In .html file : <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     6. Note- Order of the routes provided in app-routing.module.ts is 101% important.
     7. 
+
+
+Notes: 
+Ref : https://www.youtube.com/watch?v=N8FBmB2jme8&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ&index=6
+A. Propoerty Binding :
+    1. Attributes Vs Properties : 
+        a. Attributes and properties are not the same.
+        b. Attributes are defined by - HTML 
+        c. Properties are defined by - DOM
+        d. Attributes intialize DOM properties and then they are done. Attributes values cannot be changed once they are initilized.
+        e. Property values can be changed.
+    
+    2. Property Binding is nothing but using the attribute of a HTML <tag> as a property to set value. 
+        eg. <input [id]="myId" type="text"> (..here, "id" is HTML Attri which we use it as prop to set a value from our .js file)
+
+B. Class Binding :
+    1. A derective is nothing but a custom HTML-attribute that angular provides. (eg. [ngClass]="")
+
+C. Style Binding : 
+    1. In Angular, style binding is used to apply inline styles to HTML elements. 
+    2. Style Binding is similar to class-binding.
+    3. Syntax : <h2 [style.cssProp]="'value'">Sample</h2>
+    4. We can also bing custom style using derective "[ngStyle]" .
+        syntax : 
+                <h2 [ngStyle]={{SomeObject}}>Sample</h2>
+                var SomeObject = {
+                    color : 'orange',
+                    fontStyle : 'italic'
+                    }
+
+D. Event Binding : 
+    1. $event : It is a special varaible for angular which gives details about the DOM event that was raised.
+
+E. Template Reference Variables : 
+    Eg - There is a form and you want to log the input provided name of user on sumbitting the form. In succh scenario "Template Reference Variables" can be used. Ref below code syntax.
+    Syntax : 
+    <input #inRefVar type="text">
+    <button (click)="logMsg(inRefVar.value)">Log</button>
+
+F. Two-way Binding : 
+    1. It allows us to update a property and at the same-time display the updated value of that property.
+    2. For this angular also provides a derective "[(ngModel)]"

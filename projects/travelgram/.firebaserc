@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lco-project-01": {
+      "hosting": {
+        "travelgram": [
+          "lco-project-01"
+        ]
+      }
+    }
+  }
+}
